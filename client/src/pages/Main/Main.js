@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './Main.css';
-import Product from './components/Product';
-import Promotion from './components/Promotion';
-import HowItWorks from './components/HowItWorks';
-import FromBlog from './components/FromBlog';
-import Features from './components/Features';
+import Product from './../../common/Product';
+import Promotion from './../../common/Promotion';
+import HowItWorks from './../../common/HowItWorks';
+import FromBlog from './../../common/FromBlog';
+import Features from './../../common/Features';
+import { Grid } from '../../components/Grid';
+import { LargeButton } from './../../components'
+import NewsLetter from './../../common/NewsLetter';
 
 const Products = [
     { id: 1, title: 'Rest Armchair', mainImage: '/images/armchair-1.jpg', subImage: '/images/armchair-1a.jpg', link: '/product/arm-chair', price: 999, oldPrice: 1499 },
@@ -33,15 +36,15 @@ class Main extends Component {
                     <div className="banner-container">
                         <h1 className="text-white">Summer Sale</h1>
                         <p>Grab this summer the best deals online at discount</p>
-                        <a href="/shop" className="button button-large">Shop now</a>
+                        <LargeButton>Shop now</LargeButton>
                     </div>
                 </section>
                 <section className="section-arrivals">
                     <div className="container">
                         <h2 className="section-title">Latest Arrivals</h2>
-                        <div className="product-grid">
+                        <Grid>
                             {Products.map(product => <Product details={product} key={product.id} />)}
-                        </div>
+                        </Grid>
                     </div>
                 </section>
                 <div className="horizontal-rule inner"></div>
@@ -49,28 +52,7 @@ class Main extends Component {
                 <div className="horizontal-rule inner"></div>
                 <HowItWorks />
                 <FromBlog blogItems={BlogItems} />
-                <section className="section-newsletter">
-                    <div className="container container-narrow text-center">
-                        <h2>Join our mailing list</h2>
-                        <p className="text-large">Sign up to receive inspiration, product updates, and special offers from our team.</p>
-                        <div className="form">
-                            <form name="emailForm" className="subscribe-form">
-                                <input type="email" className="form-input form-input-large subscribe-form-input" placeholder="Email Address" />
-                                <input type="submit" value="Subscribe" className="button button-large" />
-                            </form>
-                            <div className="form-error">Please enter a valid email</div>
-                            <div className="form-done">
-                                <p>Thank you! Your submission has been received!</p>
-                            </div>
-                            <div className="form-fail">
-                                <p>Oops! Something went wrong while submitting the form.</p>
-                            </div>
-                        </div>
-                        <div className="text-small">
-                            We’ll never share your details. View our <a href="/privacy-policy">Privacy Policy</a>
-                        </div>
-                    </div>
-                </section>
+                <NewsLetter />
                 <div className="horizontal-rule inner"></div>
                 <Features />
             </div>

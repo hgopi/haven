@@ -9,7 +9,7 @@ const HowItWorks = () => {
                 <div className="benefits-grid layout-grid">
                     <div className="benefit-process process-1">
                         <div className="image-container">
-                            <img src="/images/square-small-1.jpg" />
+                            <img src="/images/square-small-1.jpg" alt="" />
                             <div className="process-circle">
                                 1.
                             </div>
@@ -21,7 +21,7 @@ const HowItWorks = () => {
                     </div>
                     <div className="benefit-process process-2">
                         <div className="image-container">
-                            <img src="/images/square-small-2.jpeg" />
+                            <img src="/images/square-small-2.jpeg" alt="" />
                             <div className="process-circle">
                                 2.
                             </div>
@@ -33,7 +33,7 @@ const HowItWorks = () => {
                     </div>
                     <div className="benefit-process process-3">
                         <div className="image-container">
-                            <img src="/images/square-small-3.jpeg" />
+                            <img src="/images/square-small-3.jpeg" alt="" />
                             <div className="process-circle">
                                 3.
                             </div>

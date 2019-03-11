@@ -1,0 +1,58 @@
+{
+    "Products": [
+        {
+            "id": 1,
+            "title": "Rest Armchair",
+            "mainImage": "/images/decoration-2.jpg",
+            "subImage": "",
+            "link": "/product/arm-chair",
+            "price": 999,
+            "oldPrice": 1499
+        },
+        {
+            "id": 2,
+            "title": "Bar Stool",
+            "mainImage": "/images/lamp-1.jpg",
+            "subImage": "",
+            "link": "/product/bar-stool",
+            "price": 1299,
+            "oldPrice": ""
+        },
+        {
+            "id": 3,
+            "title": "Coffee Table",
+            "mainImage": "/images/chair-1.jpg",
+            "subImage": "/images/chair-1a.jpeg",
+            "link": "/product/coffee-table",
+            "price": 1299,
+            "oldPrice": ""
+        },
+        {
+            "id": 4,
+            "title": "Bancroft Sofa",
+            "mainImage": "/images/coffee-table-1.jpg",
+            "subImage": "",
+            "link": "/product/coffee-table",
+            "price": 1499,
+            "oldPrice": ""
+        },
+        {
+            "id": 5,
+            "title": "Dining Chair",
+            "mainImage": "/images/bar-stool-1-p-500.jpeg",
+            "subImage": "/images/bar-stool-1b-p-800.jpeg",
+            "link": "/product/bar-stool",
+            "price": 1299,
+            "oldPrice": ""
+        },
+        {
+            "id": 6,
+            "title": "Blanc Eiffel Chair",
+            "mainImage": "/images/armchair-1.jpg",
+            "subImage": "/images/armchair-1a.jpg",
+            "link": "/product/arm-chair",
+            "price": 999,
+            "oldPrice": 1499
+        }
+    ]
+}

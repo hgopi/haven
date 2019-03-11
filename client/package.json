@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
     "bootstrap": "^4.3.1",
-    "emotion": "^10.0.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
@@ -25,5 +26,8 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "babel-plugin-emotion": "^10.0.9"
+  }
 }

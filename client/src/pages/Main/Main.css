@@ -40,19 +40,7 @@ section {
 h1, h2 {
     color: #090e1d;
 }
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -0.75rem;
-    margin-left: -0.75rem;
-}
-.product-grid .product-grid-item {
-    width: 33.33333333%;
-    margin-bottom: 3rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-}
-.product-grid .product-grid-item .product-link {
+.product-grid-item .product-link {
     position: relative;
     color: #090e1d;
     display: inline-block;
@@ -220,28 +208,7 @@ h1, h2 {
 .section-fromblog {
     background: #f8f8f8;
 }
-.section-fromblog .blog-grid {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: -0.75rem;
-    margin-left: -0.75rem;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-.blog-grid .blog-grid-item {
-    width: 33.33333333%;
-    margin-bottom: 3rem;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
-}
-.blog-grid .blog-grid-item .blog-item-link {
+.blog-item-link {
     display: inline-block;
     max-width: 100%;
 }
@@ -249,10 +216,11 @@ h1, h2 {
     max-width: 100%;
     margin-bottom: 1.5rem;
 }
-.blog-grid .blog-grid-item .blog-item-date {
+.blog-item-date {
     margin-bottom: 0.5rem;
     font-weight: 400;
     opacity: 0.55;
+    margin-top: 1.5rem;
 }
 .form {
     margin-bottom: 10px;

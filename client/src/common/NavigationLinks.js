@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'react-router-dom/Link';
 
 const NavigationLinks = ({ links }) => {
 
@@ -7,7 +8,7 @@ const NavigationLinks = ({ links }) => {
             <ul className="navigation-links">
                 {links.map((link) => {
                     return (<li className="navigation-link-item" key={link.text}>
-                        <a className="text-large" href={link.route}>{link.text}</a>
+                        <Link className="text-large" to={link.route}>{link.text}</Link>
                     </li>)
                 })}
             </ul>

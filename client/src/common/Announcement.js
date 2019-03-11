@@ -1,14 +1,15 @@
 import React from 'react';
+import { AnnouncementButton } from './../components';
 
 const Announcement = () => (
     <div className="announcement-bar">
         <div className="container">
             <div className="text-large announcement-text">
                 This summer grab the best deals now
-              </div>
-            <button className="button button-white button-small button-round w-button">
+            </div>
+            <AnnouncementButton>
                 Learn more
-              </button>
+            </AnnouncementButton>
         </div>
     </div>
 )

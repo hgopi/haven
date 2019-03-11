@@ -9,16 +9,16 @@ const Footer = () => (
                     <p className="site-details">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <div className="social-links">
                         <a href="#" className="social-link">
-                            <img src="images/social-twitter.svg" />
+                            <img src="/images/social-twitter.svg" />
                         </a>
                         <a href="#" className="social-link">
-                            <img src="images/social-facebook.svg" />
+                            <img src="/images/social-facebook.svg" />
                         </a>
                         <a href="#" className="social-link">
-                            <img src="images/social-pinterest.svg" />
+                            <img src="/images/social-pinterest.svg" />
                         </a>
                         <a href="#" className="social-link">
-                            <img src="images/social-instagram.svg" />
+                            <img src="/images/social-instagram.svg" />
                         </a>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const Footer = () => (
                     <div className="text-small footer-copyright">© 2018 All Rights Reserved.</div>
                     <div className="payment-badge">
                         <div className="text-tiny">Secure payment by</div>
-                        <img src="images/logo-stripe.svg" />
+                        <img src="/images/logo-stripe.svg" />
                     </div>
                 </div>
             </div>

@@ -1,13 +1,14 @@
 import React from 'react';
+import { GridItem, Img, Anchor, Badge } from './../components';
 
-const Product = ({ details }) => {
+const Product = ({ details, sale = false }) => {
     return (
-        <div className="product-grid-item">
-            <a href={details.link} className="product-link">
+        <GridItem>
+            <Anchor href={details.link}>
                 <div className="product-image">
                     <img className={(details.subImage ? 'hidden' : '')} src={details.mainImage} alt={details.title} />
                     <div className={'multi-images' + (details.subImage ? '' : ' hidden')}>
-                        <img className="item-image" src={details.mainImage} alt={details.title} />
+                        <Img className="item-image" src={details.mainImage} alt={details.title} />
                         <img className="item-image-hover" src={details.subImage} alt={details.title} />
                     </div>
                 </div>
@@ -16,8 +17,9 @@ const Product = ({ details }) => {
                     {details.oldPrice ? <div className="price-emphasis">₹{details.oldPrice}</div> : ''}
                     <div className="price">₹{details.price}</div>
                 </div>
-            </a>
-        </div>
+                {sale && <Badge>Sale</Badge>}
+            </Anchor>
+        </GridItem>
     )
 }
 

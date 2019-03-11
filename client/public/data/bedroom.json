@@ -1,0 +1,39 @@
+{
+    "Products": [
+        {
+            "id": 1,
+            "title": "Buddy Desk Lamp",
+            "mainImage": "/images/lamp-4.jpeg",
+            "subImage": "/images/lamp-4a.jpg",
+            "link": "/product/arm-chair",
+            "price": 999,
+            "oldPrice": ""
+        },
+        {
+            "id": 2,
+            "title": "Soma Bed",
+            "mainImage": "/images/bed-3.jpg",
+            "subImage": "/images/bed-3.jpeg",
+            "link": "/product/bar-stool",
+            "price": 2099,
+            "oldPrice": ""
+        },
+        {
+            "id": 3,
+            "title": "Anders Bed",
+            "mainImage": "/images/bed-2.jpg",
+            "subImage": "/images/bed-5a.jpg",
+            "link": "/product/bar-stool",
+            "price": 1999,
+            "oldPrice": 2199
+        },
+        {
+            "id": 4,
+            "title": "Cumulus Bed",
+            "mainImage": "/images/bed-5.jpg",
+            "subImage": "/images/bed-5a.jpeg",
+            "link": "/product/coffee-table",
+            "price": 2499
+        }
+    ]
+}

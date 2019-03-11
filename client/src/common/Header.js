@@ -3,7 +3,7 @@ import './navigation.css';
 import { NavigationLinks, NavigationTop } from '.';
 
 const navLinks = [
-    { text: 'All', route: '/all' },
+    { text: 'All', route: '/store' },
     { text: 'Sale', route: '/sale' },
     { text: 'Dining', route: '/dining' },
     { text: 'Living', route: '/living' },

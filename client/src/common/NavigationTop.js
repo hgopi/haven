@@ -8,15 +8,15 @@ const NavigationTop = ({ isOpen, onClickCallback }) => {
                 <a href="/" className="app-title">H A V E N</a>
             </div>
             <div className="navigation-controls">
-                <img src="images/icon-search.svg" className="search-trigger" alt="search" />
-                <a>
-                    <img src="images/icon-cart.svg" className="cart-open" alt="open cart" />
+                <img src="/images/icon-search.svg" className="search-trigger" alt="search" />
+                <a href="/cart">
+                    <img src="/images/icon-cart.svg" className="cart-open" alt="open cart" />
                     <div className="cart-count">1</div>
                 </a>
             </div>
             <div className="menu-toggle">
                 <div className="menu-toggle-dropdown">
-                    <a href="javascript:void(0)" onClick={onClickCallback}><img src="images/icon-menu.svg" className="toggle-menu" alt="open dropdown menu" /></a>
+                    <a href="javascript:void(0)" onClick={onClickCallback}><img src="/images/icon-menu.svg" className="toggle-menu" alt="open dropdown menu" /></a>
                     <nav className={'dropdown-menu' + (isOpen ? ' open' : '')}>
                         <a href="/about" className="dropdown-link w-dropdown-link">About</a>
                         <a href="/contact" className="dropdown-link w-dropdown-link">Contact</a>
