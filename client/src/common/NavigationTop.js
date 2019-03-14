@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { openSideNav } from './../redux/actions';
 
-const NavigationTop = ({ isOpen, onClickCallback, openSideNav }) => {
+const NavigationTop = ({ isOpen, onClickCallback, openSideNav, cartItems }) => {
 
     return (
         <div className="navigation-top">
@@ -14,7 +14,7 @@ const NavigationTop = ({ isOpen, onClickCallback, openSideNav }) => {
                 <img src="/images/icon-search.svg" className="search-trigger" alt="search" />
                 <a href="javascript:void(0)" onClick={openSideNav}>
                     <img src="/images/icon-cart.svg" className="cart-open" alt="open cart" />
-                    <div className="cart-count">1</div>
+                    <div className="cart-count">{cartItems.length}</div>
                 </a>
             </div>
             <div className="menu-toggle">
@@ -31,7 +31,14 @@ const NavigationTop = ({ isOpen, onClickCallback, openSideNav }) => {
         </div>
     );
 }
+
+const mapStateToProps = (state) => {
+    return {
+        cartItems: state.cartItems
+    }
+}
+
 export default connect(
-    null,
+    mapStateToProps,
     { openSideNav }
 )(NavigationTop)

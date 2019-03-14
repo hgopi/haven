@@ -25,8 +25,9 @@ class App extends Component {
 
   testApi() {
     fetch('/test')
-      .then(res => res.json())
-      .then(result => console.log(result));
+      .then(res => res.ok ? res.json() : Error())
+      .then(result => console.log(result))
+      .catch(err => console.log(err));
   }
 
   render() {

@@ -1,6 +1,21 @@
 import React, { Component, Fragment } from 'react';
 import { ProductDetailsList, BreadCrumb, ProductOtherDetails } from './../../common';
 import { TwoColGrid, GridItem1, GridItem2, Img } from '../../components';
+import { addCartItem, openSideNav } from './../../redux/actions/';
+import { connect } from 'react-redux';
+
+const mapStateToProps = (state) => {
+    return {
+        cartItems: state.cartItems
+    }
+}
+
+const mapDispatchtoProps = (dispatch) => {
+    return {
+        addCartItem: (item) => dispatch(addCartItem(item)),
+        openSideNav: () => dispatch(openSideNav())
+    }
+}
 
 class Details extends Component {
 
@@ -19,7 +34,6 @@ class Details extends Component {
             .then((res) => {
                 const match = res.Products.find((product) => product.link === '/product/' + name);
                 if (match) {
-                    console.log(match);
                     this.setState({ match });
                 }
             });
@@ -29,6 +43,11 @@ class Details extends Component {
         this.setState({
             showMainImage: !this.state.showMainImage
         })
+    }
+
+    addCartItem = () => {
+        this.props.addCartItem(this.state.match);
+        this.props.openSideNav();
     }
 
     render() {
@@ -41,7 +60,6 @@ class Details extends Component {
                 <div className="horizontal-rule inner"></div>
                 <div className="container">
                     <BreadCrumb path={[category, title]} />
-
                     <section className="product-description">
                         <TwoColGrid>
                             <GridItem1>
@@ -71,7 +89,7 @@ class Details extends Component {
                                 {otherDetails && <ProductOtherDetails details={otherDetails} />}
                                 <div className="place-order">
                                     <input className="place-order-input" type="number" id="quantity" name="quantity" min="1" defaultValue="1" />
-                                    <button className="btn-addtocart">Add to Cart</button>
+                                    <button className="btn-addtocart" onClick={this.addCartItem}>Add to Cart</button>
                                 </div>
                             </GridItem2>
                         </TwoColGrid>
@@ -83,4 +101,4 @@ class Details extends Component {
 
 }
 
-export default Details;
+export default connect(mapStateToProps, mapDispatchtoProps)(Details);

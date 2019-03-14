@@ -9,18 +9,19 @@ export const CartContainerWrapper = styled.div`
     align-items: stretch;
     background-color: rgba(9, 14, 29, .7);    
     opacity: 0;
-    display: none;
+    display: block;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: -2;
     text-align: unset;
-    transition: opacity 300ms ease 0s;
+    transition: opacity 500ms ease;
     &.open {
         display: block;
-        opacity: 1;        
+        opacity: 1;
+        z-index: 2;
         & .cart-container {
             transform: translateX(0px);
         }
@@ -39,9 +40,9 @@ export const CartContainer = styled.div`
     padding-right: 2.25rem;
     padding-left: 2.25rem;
     height: 100%;
-    transform: none;
+    transform: translateX(100%);
     margin-left: auto;
-    transition: transform 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 `
 
 export const FormWrapper = styled.div`
