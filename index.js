@@ -7,7 +7,7 @@ const productsRoute = require('./app/products/routes');
 const app = express();
 
 // mongoose.connect('mongodb://localhost:27017/haven', { useNewUrlParser: true });
-mongoose.connect('mongodb://hgopi:zTMxQ6HHFd6bfgW@ds017205.mlab.com:17205/heroku_8wbkd9kw', { useNewUrlParser: true });
+// mongoose.connect('mongodb://hgopi:zTMxQ6HHFd6bfgW@ds017205.mlab.com:17205/heroku_8wbkd9kw', { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

@@ -10,6 +10,12 @@ import Dining from './pages/Dining/Dining';
 import Living from './pages/Living/Living';
 import Bedroom from './pages/Bedroom/Bedroom';
 import Details from './pages/Details/Details';
+import Cart from './pages/Cart/Cart';
+import reducer from './redux/reducers';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux'
+
+const store = createStore(reducer);
 
 class App extends Component {
 
@@ -25,25 +31,27 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="App">
-          <header className="App-header">
-            <Announcement />
-            <Header />
-          </header>
-
-          <main>
-            <Route path="/" exact component={Main} />
-            <Route path="/store" exact component={Store} />
-            <Route path="/sale" exact component={Sale} />
-            <Route path="/dining" exact component={Dining} />
-            <Route path="/living" exact component={Living} />
-            <Route path="/bedroom" exact component={Bedroom} />
-            <Route path="/product/:name" exact component={Details} />
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <header className="App-header">
+              <Announcement />
+              <Header />
+              <Cart />
+            </header>
+            <main>
+              <Route path="/" exact component={Main} />
+              <Route path="/store" exact component={Store} />
+              <Route path="/sale" exact component={Sale} />
+              <Route path="/dining" exact component={Dining} />
+              <Route path="/living" exact component={Living} />
+              <Route path="/bedroom" exact component={Bedroom} />
+              <Route path="/product/:name" exact component={Details} />
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </Provider>
     );
   }
 }

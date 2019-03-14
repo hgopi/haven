@@ -1,6 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { openSideNav } from './../redux/actions';
 
-const NavigationTop = ({ isOpen, onClickCallback }) => {
+const NavigationTop = ({ isOpen, onClickCallback, openSideNav }) => {
 
     return (
         <div className="navigation-top">
@@ -9,7 +12,7 @@ const NavigationTop = ({ isOpen, onClickCallback }) => {
             </div>
             <div className="navigation-controls">
                 <img src="/images/icon-search.svg" className="search-trigger" alt="search" />
-                <a href="/cart">
+                <a href="javascript:void(0)" onClick={openSideNav}>
                     <img src="/images/icon-cart.svg" className="cart-open" alt="open cart" />
                     <div className="cart-count">1</div>
                 </a>
@@ -28,5 +31,7 @@ const NavigationTop = ({ isOpen, onClickCallback }) => {
         </div>
     );
 }
-
-export default NavigationTop;
+export default connect(
+    null,
+    { openSideNav }
+)(NavigationTop)

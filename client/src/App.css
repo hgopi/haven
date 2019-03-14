@@ -140,6 +140,12 @@ a:hover {
 .horizontal-rule.horizontal-rule-light {
   background-color: #fff;
 }
+.horizontal-rule.product-horizontal-rule {
+  background-color: #090e1d;
+  opacity: 1;
+  height: 2px;
+  margin-top: 3rem;
+}
 .form-input {
   height: 3rem;
   margin-bottom: 1.5rem;
@@ -241,4 +247,65 @@ footer .footer-lower .payment-badge {
 }
 footer .footer-lower img {
   margin-left: 0.25rem;
+}
+.product-images-gallery {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  flex-wrap: nowrap;
+}
+.product-images-gallery .image-gallery {
+  width: 25%;
+  padding: 0px 0.75rem;
+  position: relative;
+  height: auto;
+}
+.place-order {
+  font-size: 15px;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  margin-top: 2rem;
+  margin-bottom: 0px;
+}
+.place-order-input {
+  width: 80px;
+  text-align: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0rem;
+  height: 3.75rem;
+  font-size: 1.25rem;
+  line-height: 3.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e8e9ea;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: border-color 200ms ease;
+  outline-style: none;
+}
+.place-order-input:focus {
+  border-color: #d2d3d5;
+}
+.place-order .btn-addtocart {
+  display: inline-block;
+  padding: 0px 2rem;
+  text-align: center;
+  background-color: #090e1d;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  transition: transform 0.25s linear;
+}
+.place-order .btn-addtocart:active {
+  transform: scale(0.97);
 }

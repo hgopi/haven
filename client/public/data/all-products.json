@@ -47,7 +47,32 @@
             "link": "/product/yuves-bar-stool",
             "price": 999,
             "oldPrice": 1499,
-            "category": "Dining"
+            "category": "Dining",
+            "description": "Proin magna. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.",
+            "details": [
+                {
+                    "key": "Materials",
+                    "value": "Wood, Aluminium"
+                },
+                {
+                    "key": "Delivery Information",
+                    "value": "Here is some important information regarding delivery."
+                }
+            ],
+            "otherDetails": [
+                {
+                    "key": "Weight",
+                    "value": "14 KG"
+                },
+                {
+                    "key": "Dimensions",
+                    "value": "26cm x 12cm x 60cm"
+                },
+                {
+                    "key": "Made in",
+                    "value": "India"
+                }
+            ]
         },
         {
             "id": 6,

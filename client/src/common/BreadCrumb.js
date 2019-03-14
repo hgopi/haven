@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 const cssBreadcrumb = css`
     list-style: none;
     padding-left: 0;
+    margin-top: 1.5rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -42,8 +43,8 @@ const BreadCrumb = (props) => (
     <ol css={cssBreadcrumb}>
         <li><a href="/">Home</a></li>
         {props.path && props.path.map((link, index, array) => (
-            index !== array.length - 1 ? <li><Link to={`/${(link || '').toLowerCase()}`}>{link}</Link></li> :
-                <li>{link}</li>
+            index !== array.length - 1 ? <li key={index}><Link to={`/${(link || '').toLowerCase()}`}>{link}</Link></li> :
+                <li key={index}>{link}</li>
         ))}
     </ol >
 );
