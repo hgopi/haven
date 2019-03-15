@@ -51,7 +51,7 @@ class Cart extends Component {
                                 <div css={style.subTotaltitle}>Subtotal</div>
                                 <div>₹999.00</div>
                             </div>
-                            <Link css={style.anchorCheckout} to="/checkout">Continue to Checkout</Link>
+                            <Link css={style.anchorCheckout} onClick={this.props.closeSideNav} to="/checkout">Continue to Checkout</Link>
                         </div>}
                     </style.FormWrapper>
                 </style.CartContainer>

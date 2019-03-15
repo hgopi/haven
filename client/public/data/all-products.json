@@ -1,27 +1,24 @@
 {
     "Products": [
         {
-            "id": 1,
             "title": "Buddy Desk Lamp",
             "mainImage": "/images/lamp-4.jpeg",
             "subImage": "/images/lamp-4a.jpg",
             "link": "/product/desk-lamp",
             "price": 999,
-            "oldPrice": "",
+            "oldPrice": null,
             "category": "Bedroom"
         },
         {
-            "id": 2,
             "title": "Soma Bed",
             "mainImage": "/images/bed-3.jpg",
             "subImage": "/images/bed-3.jpeg",
             "link": "/product/soma-bed",
             "price": 2099,
-            "oldPrice": "",
+            "oldPrice": null,
             "category": "Bedroom"
         },
         {
-            "id": 3,
             "title": "Anders Bed",
             "mainImage": "/images/bed-2.jpg",
             "subImage": "/images/bed-5a.jpg",
@@ -31,7 +28,6 @@
             "category": "Bedroom"
         },
         {
-            "id": 4,
             "title": "Cumulus Bed",
             "mainImage": "/images/bed-5.jpg",
             "subImage": "/images/bed-5a.jpeg",
@@ -40,7 +36,60 @@
             "category": "Bedroom"
         },
         {
-            "id": 5,
+            "title": "Dana Dining Chair",
+            "mainImage": "/images/chair-6.jpg",
+            "subImage": "/images/chair-6a.jpg",
+            "link": "/product/dana-dining-chair",
+            "price": 1099,
+            "oldPrice": 1399,
+            "category": "Dining"
+        },
+        {
+            "title": "Perk Dining Chair",
+            "mainImage": "/images/chair-5.jpg",
+            "subImage": "/images/chair-5a.jpg",
+            "link": "/product/perk-dining-chair",
+            "price": 899,
+            "oldPrice": null,
+            "category": "Living"
+        },
+        {
+            "title": "Blanc Eiffel Chair",
+            "mainImage": "/images/chair-1.jpg",
+            "subImage": "/images/chair-1a.jpg",
+            "link": "/product/blanc-eiffel-chair",
+            "price": 2099,
+            "oldPrice": 2499,
+            "category": "Living"
+        },
+        {
+            "title": "Wagner Eiffel Chair",
+            "mainImage": "/images/chair-2.jpeg",
+            "subImage": "/images/chair-2a.jpg",
+            "link": "/product/wanger-eiffel-chair",
+            "price": 2199,
+            "oldPrice": 2699,
+            "category": "Dining"
+        },
+        {
+            "title": "Blanc Eiffel Chair",
+            "mainImage": "/images/armchair-1.jpg",
+            "subImage": "/images/armchair-1a.jpg",
+            "link": "/product/blank-eiffel-chair",
+            "price": 999,
+            "oldPrice": 1499,
+            "category": "Living"
+        },
+        {
+            "title": "Rest Armchair",
+            "mainImage": "/images/decoration-2.jpg",
+            "subImage": "",
+            "link": "/product/arm-chair",
+            "price": 999,
+            "oldPrice": 1499,
+            "category": "Dining"
+        },
+        {
             "title": "Yves Bar Stool",
             "mainImage": "/images/bar-stool-1-p-500.jpeg",
             "subImage": "/images/bar-stool-1b-p-800.jpeg",
@@ -48,7 +97,6 @@
             "price": 999,
             "oldPrice": 1499,
             "category": "Dining",
-            "description": "Proin magna. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.",
             "details": [
                 {
                     "key": "Materials",
@@ -73,66 +121,6 @@
                     "value": "India"
                 }
             ]
-        },
-        {
-            "id": 6,
-            "title": "Dana Dining Chair",
-            "mainImage": "/images/chair-6.jpg",
-            "subImage": "/images/chair-6a.jpg",
-            "link": "/product/dana-dining-chair",
-            "price": 1099,
-            "oldPrice": 1399,
-            "category": "Dining"
-        },
-        {
-            "id": 7,
-            "title": "Perk Dining Chair",
-            "mainImage": "/images/chair-5.jpg",
-            "subImage": "/images/chair-5a.jpg",
-            "link": "/product/perk-dining-chair",
-            "price": 899,
-            "oldPrice": "",
-            "category": "Living"
-        },
-        {
-            "id": 8,
-            "title": "Blanc Eiffel Chair",
-            "mainImage": "/images/chair-1.jpg",
-            "subImage": "/images/chair-1a.jpg",
-            "link": "/product/blanc-eiffel-chair",
-            "price": 2099,
-            "oldPrice": 2499,
-            "category": "Living"
-        },
-        {
-            "id": 9,
-            "title": "Wagner Eiffel Chair",
-            "mainImage": "/images/chair-2.jpeg",
-            "subImage": "/images/chair-2a.jpg",
-            "link": "/product/wanger-eiffel-chair",
-            "price": 2199,
-            "oldPrice": 2699,
-            "category": "Dining"
-        },
-        {
-            "id": 10,
-            "title": "Blanc Eiffel Chair",
-            "mainImage": "/images/armchair-1.jpg",
-            "subImage": "/images/armchair-1a.jpg",
-            "link": "/product/blank-eiffel-chair",
-            "price": 999,
-            "oldPrice": 1499,
-            "category": "Living"
-        },
-        {
-            "id": 11,
-            "title": "Rest Armchair",
-            "mainImage": "/images/decoration-2.jpg",
-            "subImage": "",
-            "link": "/product/arm-chair",
-            "price": 999,
-            "oldPrice": 1499,
-            "category": "Dining"
         }
     ]
 }
