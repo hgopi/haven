@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Header, Announcement } from './common';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from './pages/Main/Main';
 import Footer from './common/Footer';
 import Store from './pages/Store/Store';
@@ -47,19 +47,21 @@ class App extends Component {
               <Cart />
             </header>
             <main>
-              <Route path="/" exact component={Main} />
-              <Route path="/store" exact component={Store} />
-              <Route path="/sale" exact component={Sale} />
-              <Route path="/dining" exact component={Dining} />
-              <Route path="/living" exact component={Living} />
-              <Route path="/bedroom" exact component={Bedroom} />
-              <Route path="/product/:name" exact component={Details} />
-              <Route path="/checkout" exact component={Checkout} />
-              <Route path="/about" exact component={About} />
-              <Route path="/contact" exact component={Contact} />
-              <Route path="/faq" exact component={Faq} />
-              <Route path="/legal" exact component={Legal} />
-              <Route component={Page404} />
+              <Switch>
+                <Route path="/" exact component={Main} />
+                <Route path="/store" exact component={Store} />
+                <Route path="/sale" exact component={Sale} />
+                <Route path="/dining" exact component={Dining} />
+                <Route path="/living" exact component={Living} />
+                <Route path="/bedroom" exact component={Bedroom} />
+                <Route path="/product/:name" exact component={Details} />
+                <Route path="/checkout" exact component={Checkout} />
+                <Route path="/about" exact component={About} />
+                <Route path="/contact" exact component={Contact} />
+                <Route path="/faq" exact component={Faq} />
+                <Route path="/legal" exact component={Legal} />
+                <Route component={Page404} />
+              </Switch>
             </main>
             <Footer />
           </div>
