@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 
 export const CartContainerWrapper = styled.div`
     display: flex;
@@ -94,67 +93,6 @@ export const cartForm = css`
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0%;
-`
-
-export const cartList = css`
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%;
-    overflow: auto;
-    padding: 0px;
-`
-
-export const cartItem = css`
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(9, 14, 29, .1);
-`;
-
-export const cartItemImage = css`
-    width: 100px;
-    height: auto;
-`;
-
-export const cartItemDetails = css`
-    display: block;
-    padding-right: 1rem;
-    padding-left: 1rem;
-`;
-
-export const cartItemTitle = css`
-    margin-bottom: 0.25rem;
-    font-size: 1rem;
-    color: #333;
-    font-weight: 700;
-`
-
-export const cartItemRemove = css`
-    margin-top: 1.5rem;
-    display: block;
-    font-size: 0.875rem;
-`
-
-export const cartQuanitity = css`
-    border-color: #e8e9ea;
-    background-color: #fff;
-    transition: border-color 200ms ease;
-    border: 1px solid #e8e9ea;
-    color: #333;
-    display: block;
-    font-size: 14px;
-    height: 38px;
-    line-height: 20px;
-    margin-bottom: 10px;
-    padding-top: 8px;
-    padding-right: 6px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    width: 60px;
-    appearance: none;
-    outline: 0;
 `
 
 export const cartFooter = css`

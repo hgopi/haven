@@ -51,7 +51,6 @@ class Details extends Component {
     }
 
     render() {
-        const { name } = this.state;
         const { showMainImage } = this.state;
         const { category, title, mainImage, subImage, price, description } = this.state.match;
         const { details, otherDetails } = this.state.match;

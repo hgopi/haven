@@ -31,4 +31,12 @@ router.get('/link', (req, res) => {
 
 });
 
+router.get('/latest', (req, res) => {
+    Products.find({}, { _id: 0 }, { sort: { _id: -1 }, limit: 3 }, (err, result) => {
+        if (err) res.json({ response: {} });
+        res.json({ response: { result } });
+    });
+
+});
+
 module.exports = router;

@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Anchor } from './Anchor';
 
 const Img = styled.img`
     position: relative;

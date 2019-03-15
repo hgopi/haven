@@ -88,7 +88,7 @@
 .menu-toggle-dropdown {
     position: relative;
     text-align: left;
-    z-index: 901;
+    z-index: 2;
     display: inline-block;
 }
 .dropdown-menu {

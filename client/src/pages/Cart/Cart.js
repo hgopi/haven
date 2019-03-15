@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
+import { Component } from 'react';
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import { connect } from 'react-redux';
 import * as style from './style';
 import { closeSideNav, removeCartItem } from './../../redux/actions';
+import { CartItem } from './../../common';
+import Link from 'react-router-dom/Link';
 
 const mapStateToProps = (state) => {
     return {
@@ -23,43 +23,35 @@ const mapDispatchtoProps = (dispatch) => {
 
 class Cart extends Component {
 
+    stopPropagation = (event) => {
+        event.stopPropagation();
+    }
+
     render() {
         const { isNavOpen, cartItems } = this.props;
         const isEmptyCart = cartItems.length === 0;
         return (
             <style.CartContainerWrapper className={isNavOpen ? 'open' : ''} onClick={this.props.closeSideNav}>
-                <style.CartContainer className="cart-container">
+                <style.CartContainer className="cart-container" onClick={this.stopPropagation}>
                     <div css={style.cartHeader}>
                         <div css={style.titleWrapper}>
                             <h4 css={style.h4}>Your Cart</h4>
                             <div css={style.badge}>{cartItems.length}</div>
                         </div>
-                        <a href="javascript:void(0)" onClick={this.props.closeSideNav}><img src="/images/icon-cross.svg" /></a>
+                        <button className="no-style-btn" onClick={this.props.closeSideNav}><img src="/images/icon-cross.svg" alt="close button" /></button>
                     </div>
                     <style.FormWrapper>
                         {isEmptyCart ? <div css={style.emptyState}>
                             <div css={style.emptyStateText}>Your cart is empty.</div>
-                            <a css={style.emptyStateLink} href="/store">Visit Store</a>
+                            <Link css={style.emptyStateLink} to="/store" onClick={this.props.closeSideNav}>Visit Store</Link>
                         </div> :
-                            <div css={style.cartList}>
-                                {cartItems.map((item, index) => {
-                                    return (<div css={style.cartItem} key={index}>
-                                        <img css={style.cartItemImage} src={item.mainImage} />
-                                        <div css={style.cartItemDetails}>
-                                            <div css={style.cartItemTitle}>{item.title}</div>
-                                            <div>₹{item.price}</div>
-                                            <a href="#" css={style.cartItemRemove}>Remove</a>
-                                        </div>
-                                        <input css={style.cartQuanitity} type="number" id="quantity" name="quantity" min="1" defaultValue="1" />
-                                    </div>)
-                                })}
-                            </div>}
+                            <CartItem cartItems={cartItems} isEditable={true} onRemove={this.props.removeCartItem} />}
                         {!isEmptyCart && <div css={style.cartFooter}>
                             <div css={style.subTotalWrapper}>
                                 <div css={style.subTotaltitle}>Subtotal</div>
                                 <div>₹999.00</div>
                             </div>
-                            <a css={style.anchorCheckout} href="/checkout">Continue to Checkout</a>
+                            <Link css={style.anchorCheckout} to="/checkout">Continue to Checkout</Link>
                         </div>}
                     </style.FormWrapper>
                 </style.CartContainer>

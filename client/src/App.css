@@ -309,3 +309,9 @@ footer .footer-lower img {
 .place-order .btn-addtocart:active {
   transform: scale(0.97);
 }
+.no-style-btn {
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  background: #fff;
+}

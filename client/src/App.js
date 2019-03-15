@@ -14,6 +14,11 @@ import Cart from './pages/Cart/Cart';
 import reducer from './redux/reducers';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux'
+import Checkout from './pages/Checkout/Checkout';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Faq from './pages/FAQ/Faq';
+import Legal from './pages/Legal/Legal';
 
 const store = createStore(reducer);
 
@@ -48,6 +53,11 @@ class App extends Component {
               <Route path="/living" exact component={Living} />
               <Route path="/bedroom" exact component={Bedroom} />
               <Route path="/product/:name" exact component={Details} />
+              <Route path="/checkout" exact component={Checkout} />
+              <Route path="/about" exact component={About} />
+              <Route path="/contact" exact component={Contact} />
+              <Route path="/faq" exact component={Faq} />
+              <Route path="/legal" exact component={Legal} />
             </main>
             <Footer />
           </div>

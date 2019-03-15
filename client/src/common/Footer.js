@@ -1,24 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => (
     <footer>
         <div className="container">
             <div className="footer-column">
                 <div className="site-details">
-                    <a href="/" className="w-inline-block footer-link">H A V E N</a>
+                    <Link to="/" className="w-inline-block footer-link">H A V E N</Link>
                     <p className="site-details">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <div className="social-links">
-                        <a href="#" className="social-link">
-                            <img src="/images/social-twitter.svg" />
+                        <a rel="noopener noreferrer" target="_blank" href="https://www.twitter.com" className="social-link">
+                            <img src="/images/social-twitter.svg" alt="twitter" />
                         </a>
-                        <a href="#" className="social-link">
-                            <img src="/images/social-facebook.svg" />
+                        <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com" className="social-link">
+                            <img src="/images/social-facebook.svg" alt="facebook" />
                         </a>
-                        <a href="#" className="social-link">
-                            <img src="/images/social-pinterest.svg" />
+                        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com" className="social-link">
+                            <img src="/images/social-pinterest.svg" alt="pinterest" />
                         </a>
-                        <a href="#" className="social-link">
-                            <img src="/images/social-instagram.svg" />
+                        <a rel="noopener noreferrer" target="_blank" href="https://instagram.com" className="social-link">
+                            <img src="/images/social-instagram.svg" alt="instagram" />
                         </a>
                     </div>
                 </div>
@@ -27,19 +28,19 @@ const Footer = () => (
                         <h5 className="text-white">Shop</h5>
                         <ul className="menu-column">
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">All</a>
+                                <Link to="/store" className="text-link-white">All</Link>
                             </li>
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Sale</a>
+                                <Link to="/sale" className="text-link-white">Sale</Link>
                             </li>
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Dining</a>
+                                <Link to="/dining" className="text-link-white">Dining</Link>
                             </li>
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Living</a>
+                                <Link to="/living" className="text-link-white">Living</Link>
                             </li>
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Bedroom</a>
+                                <Link to="/bedroom" className="text-link-white">Bedroom</Link>
                             </li>
                         </ul>
                     </div>
@@ -47,19 +48,16 @@ const Footer = () => (
                         <h5 className="text-white">Company</h5>
                         <ul className="menu-column">
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">About</a>
+                                <Link to="/about" className="text-link-white">About</Link>
                             </li>
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Blog</a>
+                                <Link to="/contact" className="text-link-white">Contact us</Link>
                             </li>
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Contact us</a>
+                                <Link to="/faq" className="text-link-white">FAQ</Link>
                             </li>
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">FAQ</a>
-                            </li>
-                            <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Terms &amp; Conditions</a>
+                                <Link to="/legal" className="text-link-white">Terms &amp; Conditions</Link>
                             </li>
                         </ul>
                     </div>
@@ -67,10 +65,10 @@ const Footer = () => (
                         <h5 className="text-white">Policy</h5>
                         <ul className="menu-column">
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Return</a>
+                                <Link to="/legal" className="text-link-white">Return</Link>
                             </li>
                             <li className="menu-column-item">
-                                <a href="/store" className="text-link-white">Sales</a>
+                                <Link to="/legal" className="text-link-white">Sales</Link>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +80,7 @@ const Footer = () => (
                     <div className="text-small footer-copyright">© 2018 All Rights Reserved.</div>
                     <div className="payment-badge">
                         <div className="text-tiny">Secure payment by</div>
-                        <img src="/images/logo-stripe.svg" />
+                        <img src="/images/logo-stripe.svg" alt="secure payment icon" />
                     </div>
                 </div>
             </div>
