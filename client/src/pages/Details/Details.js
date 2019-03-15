@@ -3,18 +3,18 @@ import { ProductDetailsList, BreadCrumb, ProductOtherDetails } from './../../com
 import { TwoColGrid, GridItem1, GridItem2, Img } from '../../components';
 import { addCartItem, openSideNav } from './../../redux/actions/';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getProductDetailsByName } from './../../redux/thunk';
 
 const mapStateToProps = (state) => {
     return {
-        cartItems: state.cartItems
+        details: state.products.details
     }
 }
 
 const mapDispatchtoProps = (dispatch) => {
-    return {
-        addCartItem: (item) => dispatch(addCartItem(item)),
-        openSideNav: () => dispatch(openSideNav())
-    }
+    const actions = bindActionCreators({ addCartItem, openSideNav })
+    return { ...actions, dispatch };
 }
 
 class Details extends Component {
@@ -29,14 +29,15 @@ class Details extends Component {
     }
 
     componentDidMount() {
-        const { name } = this.state;
-        fetch('/data/all-products.json').then(res => res.json())
-            .then((res) => {
-                const match = res.Products.find((product) => product.link === '/product/' + name);
-                if (match) {
-                    this.setState({ match });
-                }
-            });
+        const { name } = this.props.match.params;
+        this.props.dispatch(getProductDetailsByName(name));
+        // fetch('/data/all-products.json').then(res => res.json())
+        //     .then((res) => {
+        //         const match = res.Products.find((product) => product.link === '/product/' + name);
+        //         if (match) {
+        //             this.setState({ match });
+        //         }
+        //     });
     }
 
     toggleImage = () => {
@@ -52,8 +53,8 @@ class Details extends Component {
 
     render() {
         const { showMainImage } = this.state;
-        const { category, title, mainImage, subImage, price, description } = this.state.match;
-        const { details, otherDetails } = this.state.match;
+        const { category, title, mainImage, subImage, price, description } = this.props.details || {};
+        const { details, otherDetails } = this.props.details || {};
         return (
             <Fragment>
                 <div className="horizontal-rule inner"></div>

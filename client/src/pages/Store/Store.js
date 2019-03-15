@@ -1,24 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import { Grid, LargeButton } from '../../components';
 import Product from './../../common/Product';
+import { connect } from 'react-redux';
+import { getAllProducts } from '../../redux/thunk';
 
 class Store extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            products: null
-        }
-    }
-
     componentDidMount() {
-        fetch('./data/products.json')
-            .then(res => res.json())
-            .then(res => this.setState({ products: res.Products }));
+        this.props.dispatch(getAllProducts());
     }
 
     render() {
-        const { products } = this.state;
+        const { products } = this.props;
         return (
             <Fragment>
                 <div className="horizontal-rule inner"></div>
@@ -27,7 +20,7 @@ class Store extends Component {
                         {products ?
                             <Fragment>
                                 <Grid>
-                                    {products.map(product => <Product details={product} key={product.id} />)}
+                                    {products && products.map(product => <Product details={product} key={product._id} />)}
                                 </Grid>
                                 <div className="text-center">
                                     <LargeButton>Next</LargeButton>
@@ -42,4 +35,8 @@ class Store extends Component {
     }
 }
 
-export default Store;
+const mapStateToPros = (store) => ({
+    products: store.products.all
+});
+
+export default connect(mapStateToPros)(Store);

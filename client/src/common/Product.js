@@ -4,7 +4,7 @@ import { GridItem, Img, Anchor, Badge } from './../components';
 const Product = ({ details, sale = false }) => {
     return (
         <GridItem>
-            <Anchor href={details.link}>
+            <Anchor to={details.link}>
                 <div className="product-image">
                     <img className={(details.subImage ? 'hidden' : '')} src={details.mainImage} alt={details.title} />
                     <div className={'multi-images' + (details.subImage ? '' : ' hidden')}>

@@ -8,12 +8,8 @@ import Features from './../../common/Features';
 import { Grid } from '../../components/Grid';
 import { LargeButton } from './../../components'
 import NewsLetter from './../../common/NewsLetter';
-
-const Products = [
-    { id: 1, title: 'Rest Armchair', mainImage: '/images/armchair-1.jpg', subImage: '/images/armchair-1a.jpg', link: '/product/arm-chair', price: 999, oldPrice: 1499 },
-    { id: 2, title: 'Bar Stool', mainImage: '/images/bar-stool-1-p-500.jpeg', subImage: '/images/bar-stool-1b-p-800.jpeg', link: '/product/bar-stool', price: 1299, oldPrice: '' },
-    { id: 3, title: 'Coffee Table', mainImage: '/images/coffee-table-1.jpg', subImage: '', link: '/product/coffee-table', price: 1299, oldPrice: '' }
-];
+import { connect } from 'react-redux';
+import { getLatestProducts } from '../../redux/thunk';
 
 const BlogItems = [
     { id: 1, title: 'A look back at 2018’s emerging design trends', date: 'December 31', img: '/images/blog-3-thumb.jpeg', link: '/blog/blog-1' },
@@ -28,7 +24,12 @@ class Main extends Component {
         this.state = {};
     }
 
+    componentDidMount() {
+        this.props.dispatch(getLatestProducts());
+    }
+
     render() {
+        const { latest } = this.props;
         return (
             <div className="main-page">
                 <section className="section-banner text-white">
@@ -43,7 +44,7 @@ class Main extends Component {
                     <div className="container">
                         <h2 className="section-title">Latest Arrivals</h2>
                         <Grid>
-                            {Products.map(product => <Product details={product} key={product.id} />)}
+                            {latest && latest.map(product => <Product details={product} key={product._id} />)}
                         </Grid>
                     </div>
                 </section>
@@ -61,4 +62,8 @@ class Main extends Component {
 
 }
 
-export default Main;
+const mapStateToProps = (state) => ({
+    latest: state.products.latest
+});
+
+export default connect(mapStateToProps)(Main);

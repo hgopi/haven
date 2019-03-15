@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import Link from 'react-router-dom/Link';
 
-const Anchor = styled.a`
+const Anchor = styled(Link)`
     position: relative;
     display: inline-block;
     &:hover .item-image {
