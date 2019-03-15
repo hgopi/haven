@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from "react-router-dom";
 import styled from '@emotion/styled';
 /** @jsx jsx */
@@ -12,10 +11,6 @@ const h1 = css`
     font-size: 4.5rem;
     line-height: 4.5rem;
     margin-bottom: 1.5rem;
-`;
-
-const textLarge = css`
-    font-size: 1.25rem;
 `;
 
 const Page404 = () => (

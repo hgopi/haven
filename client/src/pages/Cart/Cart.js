@@ -6,6 +6,7 @@ import * as style from './style';
 import { closeSideNav, removeCartItem } from './../../redux/actions';
 import { CartItem } from './../../common';
 import Link from 'react-router-dom/Link';
+import { bindActionCreators } from 'redux';
 
 const mapStateToProps = (state) => {
     return {
@@ -14,12 +15,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchtoProps = (dispatch) => {
-    return {
-        closeSideNav: () => dispatch(closeSideNav()),
-        removeCartItem: (item) => dispatch(removeCartItem(item)),
-    }
-}
+const mapDispatchtoProps = dispatch => bindActionCreators({
+    closeSideNav,
+    removeCartItem,
+}, dispatch)
 
 class Cart extends Component {
 
