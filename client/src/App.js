@@ -19,6 +19,7 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Faq from './pages/FAQ/Faq';
 import Legal from './pages/Legal/Legal';
+import Page404 from './pages/404/404';
 
 const store = createStore(reducer);
 
@@ -58,6 +59,7 @@ class App extends Component {
               <Route path="/contact" exact component={Contact} />
               <Route path="/faq" exact component={Faq} />
               <Route path="/legal" exact component={Legal} />
+              <Route component={Page404} />
             </main>
             <Footer />
           </div>
