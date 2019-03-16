@@ -5,8 +5,8 @@ const Promotion = () => (
         <div className="container">
             <div className="promotion-grid">
                 <div className="collage-image">
-                    <img className="tall-image" alt="" src="/images/tall-1.jpg" width="384" />
-                    <img className="square-image" alt="" src="/images/square-1.jpg" width="280" />
+                    <img className="tall-image" alt="" src="/images/tall-1.jpg" />
+                    <img className="square-image" alt="" src="/images/square-1.jpg" />
                 </div>
                 <div className="collage-text">
                     <h3>Beautify your space</h3>

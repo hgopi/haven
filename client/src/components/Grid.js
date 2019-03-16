@@ -5,6 +5,13 @@ export const Grid = styled.div`
     flex-wrap: wrap;
     margin-right: -0.75rem;
     margin-left: -0.75rem;
+    @media (max-width: 479px) {
+        margin-right: 0rem;
+        margin-left: 0rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
 `;
 
 export const GridItem = styled.div`
@@ -12,6 +19,10 @@ export const GridItem = styled.div`
     margin-bottom: 3rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+    @media (max-width: 479px) {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 `
 export const TwoColGrid = styled.div`
     display: grid;

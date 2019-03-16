@@ -22,6 +22,10 @@ const ButtonLarge = css`
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    @media (max-width: 479px) {
+        height: 3rem;
+        line-height: 3rem;
+    }
 `
 
 const ButtonWhite = css`

@@ -7,6 +7,11 @@ const Anchor = styled(Link)`
     &:hover .item-image {
         opacity: 0;
     }
+    @media (max-width: 479px) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0rem;
+    }
 `
 
 const AnchorButton = styled.a`
@@ -34,6 +39,9 @@ const AnchorButton = styled.a`
     &:active {
         transform: scale(0.97);
         color: #fff;
+    }
+    @media (max-width: 479px) {
+        margin-top: 1rem;
     }
 `
 

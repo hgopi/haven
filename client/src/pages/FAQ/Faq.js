@@ -4,16 +4,7 @@ import styled from '@emotion/styled';
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import { NewsLetter } from './../../common';
-
-const TextCenter = styled.div`
-    text-align: center;
-`
-
-const h1 = css`
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    margin-bottom: 1.5rem;
-`;
+import { h1, TextCenter } from './../../components/Pages';
 
 const textLarge = css`
     font-size: 1.25rem;
@@ -22,9 +13,13 @@ const textLarge = css`
 const FaqGroup = styled.div`
     display: flex;
     max-width: 60rem;
-    margin: auto;
+    margin-top: 2rem;
     align-items: flex-start;
     justify-content: space-between;
+    @media (max-width: 479px) {
+        flex-direction: column;
+        margin-top: 0rem;
+    }
 `;
 
 const FaqTitle = styled.div`
@@ -32,6 +27,9 @@ const FaqTitle = styled.div`
     padding-right: 1.5rem;
     align-items: center;
     flex: 0 0 auto;
+    @media (max-width: 479px) {
+        margin-bottom: 2rem;
+    }
 `;
 
 const FaqList = styled.ul`

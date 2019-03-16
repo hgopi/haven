@@ -39,7 +39,10 @@ export const TextArea = styled.textarea`
 export const Row = styled.div`
     display: flex;
     margin-right: -0.75rem;
-    margin-left: -0.75rem;
+    margin-left: -0.75rem;    
+    @media (max-width: 479px) {
+        flex-direction: column;
+    }
 `
 
 export const Column = styled.div`

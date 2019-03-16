@@ -39,6 +39,10 @@ const cssH2 = css`
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    @media (max-width: 479px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 `;
 
 const Banner = (props) => (

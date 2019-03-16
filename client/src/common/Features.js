@@ -3,7 +3,7 @@ import React from 'react';
 const Features = () => (
     <section className="section-features">
         <div className="container">
-            <div className="layout-grid">
+            <div className="features-grid layout-grid">
                 <div className="feature-item item-1">
                     <div className="feature-image-wrapper">
                         <img src="/images/icon-shipping-box.svg" alt="" className="feature-image" />

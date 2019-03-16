@@ -14,6 +14,10 @@ const Badge = styled.div`
     top: 1.5rem;
     right: 1.5rem;
     z-index: 1;
+    @media (max-width: 479px) {
+        right: auto;
+        left: 8.75rem;
+    }
 `
 
 export { Badge }

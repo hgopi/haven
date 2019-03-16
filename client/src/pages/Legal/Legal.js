@@ -22,6 +22,9 @@ const textLarge = css`
 const containerNarror = css`
     max-width: 588px;
     padding-bottom: 6rem;
+    @media (max-width: 479px) {
+        padding-bottom: 0;
+    }
 `
 
 const textTiny = css`

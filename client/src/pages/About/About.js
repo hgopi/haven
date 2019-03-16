@@ -1,77 +1,10 @@
 import { Fragment } from 'react';
 
-import styled from '@emotion/styled';
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import { Img } from './../../components';
 import { NewsLetter } from './../../common';
-
-const TextCenter = styled.div`
-    text-align: center;
-    padding-bottom: 4rem;
-`
-
-const h1 = css`
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    margin-bottom: 1.5rem;
-`;
-
-const textLarge = css`
-    font-size: 1.25rem;
-`;
-
-const containerNarror = css`
-    max-width: 588px;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-`
-
-const BgOffset = styled.div`
-    position: relative;
-    overflow: visible;
-    background-color: #f8f8f8;
-    text-align: center;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-`;
-
-const OffsetImg = styled.img`
-    position: absolute;
-    width: 191px;
-    height: 191px;
-    border: 12px solid #fff;
-`
-
-const Img1 = css`
-    left: 5%;
-    top: -30%;
-`;
-const Img2 = css`
-    left: -2%;
-`;
-const Img3 = css`
-    top: -7%;
-    right: 3%;
-`;
-
-const h2 = css`
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-size: 1rem;
-`
-const Blockquote = styled.blockquote`
-    display: block;
-    max-width: 49rem;
-    margin-top: 3rem;
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 2.5rem;
-    line-height: 3rem;
-    color: #2c666e;
-    text-align: center;
-`
+import { TextCenter, h1, textLarge, containerNarror, h2, Img1, Img2, Img3, BgOffset, Blockquote, OffsetImg } from './../../components/Pages';
 
 const About = (props) => (
     <Fragment>

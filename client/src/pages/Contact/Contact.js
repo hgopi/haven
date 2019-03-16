@@ -6,31 +6,7 @@ import { jsx, css } from '@emotion/core';
 import { NewsLetter } from './../../common';
 import { Row, Column, Input, TextArea, AnchorButton } from './../../components';
 import { Link } from 'react-router-dom';
-
-const TextCenter = styled.div`
-    text-align: center;
-    padding-bottom: 4rem;
-`
-
-const h1 = css`
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    margin-bottom: 1.5rem;
-`;
-
-const textLarge = css`
-    font-size: 1.25rem;
-`;
-
-const containerNarror = css`
-    max-width: 588px;
-    padding-bottom: 6rem;
-`
-
-const textSmall = css`
-    margin-right: 0.5rem;
-    font-size: 0.875rem;
-`;
+import { TextCenter, h1, textLarge, containerNarror, textSmall } from './../../components/Pages';
 
 const ContactDetails = styled.div`
     display: flex;
@@ -40,6 +16,9 @@ const ContactDetails = styled.div`
     justify-content: space-around;
     text-align: center;
     padding-bottom: 6rem;
+    @media (max-width: 479px) {
+        padding-bottom: 2rem;
+    }
 `;
 
 const DetailColumn = styled.div``
@@ -51,10 +30,18 @@ const h4 = css`
     font-size: 1.5rem;
     line-height: 1.875rem;
     font-weight: 400;
+    @media (max-width: 479px) {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
 `
 
 const textPrimary = css`
     font-size: 1.25rem;
+    @media (max-width: 479px) {
+        font-size: 0.875rem;
+    }
 `
 const textSecondary = css`
     opacity: 0.55;
