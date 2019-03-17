@@ -2,7 +2,11 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const Products = require('./app/model/products');
-const productsRoute = require('./app/products/routes');
+const productsRoute = require('./app/routes/products');
+const adminRoute = require('./app/routes/admin');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const app = express();
 
@@ -13,18 +17,22 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'admin/build')));
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/test', (req, res) => {
-    Products.find({ "link": "/product/arm-chair" }, (err, result) => {
-        if (err) res.json({ response: { result: 'not found' } });
-        res.json({ response: { result } });
-    });
-
-    console.log('Sent /test.');
-});
+// parse application/json
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(cors());
 
 app.use('/products', productsRoute);
 
+app.use('/api', adminRoute);
+
+app.get('/admin', (req, res) => {
+    res.sendFile(path.join(__dirname + '/admin/build/index.html'));
+});
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname + '/client/build/index.html'));

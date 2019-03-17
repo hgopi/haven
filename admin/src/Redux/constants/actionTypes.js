@@ -1,0 +1,1 @@
+export const ADD_ALL_PRODUCTS = 'ADD_ALL_PRODUCTS';
