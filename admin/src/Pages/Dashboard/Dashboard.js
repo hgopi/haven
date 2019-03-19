@@ -68,7 +68,7 @@ class Dashboard extends Component {
                     </Switch>
                 </section>
                 <section>
-                    {products.length && }
+                    {products.length}
                 </section>
             </Fragment>
         )
